@@ -1,9 +1,16 @@
 <h1>My tasks</h1>
-
 <ul>
   <% @tasks.each do |task | %>
-    <li><%= task.completed %> <%= link_to(task.title, task_path(task)) %> - <%= link_to 'Remove', task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <li>
+      <% if task.completed %>
+        <span>&#9745;</span>
+      <% else %>
+        <span>&#9744;</span>
+      <% end %>
+      <%= link_to(task.title, task_path(task)) %> <em> - </em> <%= link_to '&cross;'.html_safe, task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } %></li>
   <% end %>
 </ul>
+<footer>
+  <p><%= link_to '&#10010; Add a new task'.html_safe, new_task_path %></p>
+</footer>
 
-<p><%= link_to 'Add a new task', new_task_path %></p>

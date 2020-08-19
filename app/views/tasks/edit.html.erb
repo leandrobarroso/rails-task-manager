@@ -1,11 +1,15 @@
-<h1>Update task</h1>
+<h1>Edit task</h1>
 <%= form_for(@task) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.text_field :completed %>
+  <%= f.text_area(:details, size: '50x10') %>
+  <div id="completed-cb">
+    <%= f.check_box :completed %>
+    <%= f.label :completed %>
+  </div>
   <%= f.submit %>
 <% end %>
-<div><%= link_to 'Back to list', tasks_path %></div>
+<footer>
+  <p><%= link_to '&#9776; Back to list'.html_safe, tasks_path %></p>
+</footer>

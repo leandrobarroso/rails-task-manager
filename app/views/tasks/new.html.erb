@@ -3,7 +3,9 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
-  <%= f.text_field :details %>
+  <%= f.text_area(:details, size: '50x10') %>
   <%= f.submit %>
 <% end %>
-<div><%= link_to 'Back to list', tasks_path %></div>
+<footer>
+  <p><%= link_to '&#9776; Back to list'.html_safe, tasks_path %></p>
+</footer>

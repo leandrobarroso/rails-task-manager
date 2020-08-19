@@ -13,3 +13,111 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  margin: 1em 1em;
+}
+
+.container h1 {
+  font-size: 3em;
+}
+
+.container ul {
+  margin: 2em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container li a {
+  font-size: 1.5em;
+  color: black;
+
+}
+
+.container li span {
+  font-size: 1.5em;
+  color: black;
+
+}
+
+.container a {
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid lightgray;
+}
+
+#task-details {
+  margin: 2em 0;
+
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding:1em;
+  background-color: #f5f5f5;
+}
+
+#edit-btn {
+  margin: 1em;
+
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0.75em;
+  right: 0;
+}
+
+.container form {
+
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container form label {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.container form input {
+  padding: 0.5em;
+}
+
+.container form textarea {
+  padding: 0.5em;
+}
+
+input:last-child {
+  display: inline-block;
+  width: 25%;
+  margin: 1em 0;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+input:last-child:hover {
+  background-color: #005ec4;
+  color: lightgray: ;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#completed-cb {
+  margin: 1em 0;
+}
+
+#completed-cb label {
+  font-weight: normal;
+}
